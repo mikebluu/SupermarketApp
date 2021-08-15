@@ -1,4 +1,4 @@
-from domain.product import Product
+from entities.product import Product
 from repository.repository import Repository
 
 

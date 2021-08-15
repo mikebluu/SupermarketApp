@@ -97,7 +97,8 @@ class UI:
                 elif command == 2:
                     self.__buy_product()
                 elif command == 3:
-                    self.__print_products_cheaper_than()
+                    # self.__print_products_cheaper_than()
+                    print("Sorry! That isn't working at the moment.")
             except ProgramError as error:
                 print(error)
 

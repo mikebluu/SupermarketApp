@@ -1,4 +1,4 @@
-from domain.product import Product
+from entities.product import Product
 from repository.repository import Repository
 
 
@@ -14,16 +14,19 @@ class ClientService:
                 if int_quantity < product.get_quantity():
                     product.substract_quantity(int_quantity)
                     
-    def show_cheaper_than(self, str_price):
-        products_list = self.__product_repository.get_all_products()
-        products_less_than_list = []
-        for product in products_list:
-            int_price = int(str_price)
-            if product.get_price() < int_price:
-                products_less_than_list.append(product)
-        products_less_than_list = sorted(products_less_than_list, key=lambda product1: product1.price, reverse=True)
-        for sorted_product in products_less_than_list:
-            print(sorted_product)
+#show_cheaper_than is w.i.p, not working atm
+    
+    def show_cheaper_than(self, price):
+        product_list = self.__product_repository.get_all_products()
+        list_of_products_less_than = []
+        for product in product_list:
+            price = int(price)
+            if product.get_price() < price:
+                list_of_products_less_than.append(product)
+            list_of_products_less_than.sort(key=lambda x: x.price, reverse=True)
+            for sorted_product in list_of_products_less_than:
+                print(sorted_product)
+
                 
 
         

@@ -1,4 +1,3 @@
-#THIS IS DONE
 from exception.exceptions import ValidationError
 
 
