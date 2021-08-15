@@ -3,7 +3,7 @@ class Product:
         self.__barcode = barcode
         self.__name = name
         self.__brand = brand
-        self.__price = int(price)
+        self.price = int(price)
         self.__quantity = int(quantity)
         
     def get_barcode(self):
@@ -16,7 +16,7 @@ class Product:
         return self.__brand
     
     def get_price(self):
-        return self.__price
+        return self.price
     
     def get_quantity(self):
         return self.__quantity
@@ -31,7 +31,7 @@ class Product:
         self.__brand = new_brand
         
     def set_price(self, new_price):
-        self.__price = new_price
+        self.price = new_price
         
     def set_quantity(self, new_quantity):
         self.__quantity = new_quantity
@@ -43,7 +43,7 @@ class Product:
         return self.__barcode == other.get_barcode()
     
     def __str__(self):
-        return "Barcode {0}, Name {1}, Brand {2}, Price {3}, Quantity {4}".format(self.__barcode, self.__name, self.__brand, self.__price, self.__quantity)
+        return "Barcode {0}, Name {1}, Brand {2}, Price {3}, Quantity {4}".format(self.__barcode, self.__name, self.__brand, self.price, self.__quantity)
     
     def __repr__(self):
         return str(self) + "__repr__"

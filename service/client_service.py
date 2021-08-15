@@ -13,8 +13,6 @@ class ClientService:
                 int_quantity = int(quantity)
                 if int_quantity < product.get_quantity():
                     product.substract_quantity(int_quantity)
-                    
-#show_cheaper_than is w.i.p, not working atm
     
     def show_cheaper_than(self, price):
         product_list = self.__product_repository.get_all_products()
@@ -24,8 +22,8 @@ class ClientService:
             if product.get_price() < price:
                 list_of_products_less_than.append(product)
             list_of_products_less_than.sort(key=lambda x: x.price, reverse=True)
-            for sorted_product in list_of_products_less_than:
-                print(sorted_product)
+        for sorted_product in list_of_products_less_than:
+            print(sorted_product)
 
                 
 
