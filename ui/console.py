@@ -49,7 +49,7 @@ class UI:
         name = input("Name of product to be bought: ")
         quantity = input("How many products to be bought: ")
         self.__validator.validate_quantity(quantity)
-        self.__client_service.buy(name, quantity)
+        self.__client_service.buy_product(name, quantity)
         
     def __print_products_cheaper_than(self):
         price = input("Products will be cheaper than: ")

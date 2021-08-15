@@ -1,4 +1,3 @@
-#THIS IS DONE
 from domain.product import Product
 from repository.repository import Repository
 

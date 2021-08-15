@@ -1,11 +1,10 @@
-#THIS IS DONE
 class Product:
     def __init__(self, barcode, name, brand, price, quantity):
         self.__barcode = barcode
         self.__name = name
         self.__brand = brand
-        self.__price = price
-        self.__quantity = quantity
+        self.__price = int(price)
+        self.__quantity = int(quantity)
         
     def get_barcode(self):
         return self.__barcode

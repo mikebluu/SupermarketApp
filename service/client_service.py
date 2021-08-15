@@ -6,12 +6,12 @@ class ClientService:
     def __init__(self, product_repository: Repository):
         self.__product_repository = product_repository
         
-    def buy(self, name, quantity):
+    def buy_product(self, name, quantity):
         product_list = self.__product_repository.get_all_products()
         for product in product_list:
             if product.get_name() == name:
                 int_quantity = int(quantity)
-                if int_quantity < int(product.get_quantity()):
+                if int_quantity < product.get_quantity():
                     product.substract_quantity(int_quantity)
                     
     def show_cheaper_than(self, str_price):

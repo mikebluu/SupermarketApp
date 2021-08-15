@@ -1,4 +1,3 @@
-#THIS IS DONE
 class ProgramError(Exception):
     pass
 
